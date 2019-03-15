@@ -10,15 +10,6 @@ public class DataEditor {
 
 
     private String HatchlingBatchID;
-    private String gene;
-    private String CRISPRbatch;
-    private String injectionDate;
-    private String AEL;
-    private String injN;
-    private String Injpg;
-    private String HatchB;
-    private String HatchC;
-    private String Hatchpg;
     private ArrayList InjectionModification;
     private int InjectionModificationSelect;
 
@@ -38,7 +29,7 @@ public class DataEditor {
 
     private PCRData PCRentry;
     private ArrayList PCRModification;
-    private int PCRModification;
+    private int PCRModificationSelect;
     private int PCRpg#;
 
     private int rowNum;
@@ -54,9 +45,8 @@ public class DataEditor {
         Scanner sc = new Scanner(System.in);
         File DataSet = new File(CRISPRSTATdata.txt);
         String oldContent="";
+        String response;
 
-        System.out.println("What is your name? (Type the number of your name or other if not on the list");
-        scanner
 
         //ask for your name
         //ask for journal number
@@ -66,16 +56,36 @@ public class DataEditor {
         //System.out.println("New entry? ('n'/enter associated datapoint)");
 
         //if n
-        String SendOff
+        System.out.println("What is your name? (Type the number of your name or other if not on the list");
+        //if other type your first and last name
 
 
-        System.out.println("Enter geneSifter filename (Following this format: SendOffdate_Well_ID_Gene_AEL#");
+
+        System.out.println("Enter geneSifter filename (Following this format: SendOffdate_WellID_Gene_AEL#");
         //check if already entered
         //allow overrule
-        String GeneSifterName;
+        boolean run=true;
+        while (run) {
+            String GeneSifterName = sc.toString();
+            String[] GeneSifterNameParts = GeneSifterName.split("_");
+            //MISSING check valid date
+            if (GeneSifterNameParts.length!=4) run=false;
+            if (GeneSifterNameParts[2].length()!=2) run=false;
+            if (!GeneSifterNameParts[4].contains("AEL:")) run=false;
+           //MISSING check valid time
+            if (run==false) System.out.println("Please enter again with the following formate: SendOffdate_WellID_Gene_AEL:XhXm-YhYm");
+        }
+
 
         System.out.println("Enter injection batch ID or n");
+        response = sc.toString();
+        if (response.equals("n")
+        {
 
+        }
+        else if (response.equals)
+        //if yes call injectionbatch(ID)
+        //if no call injectionbatch()
         //if n make one
         System.out.println("New batch ID is GWUYEKDFGV /nPlease enter injection Date in the following Format: 12.29.2019")
         //check for correct format
