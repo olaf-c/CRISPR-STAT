@@ -1,0 +1,20 @@
+#Researchers#
+
+#InjectionModification#
+
+#RearingModification#
+
+#RearingErrors#
+
+#ExtractionModification#
+
+#ExtractionErrors#
+
+#PCRModification#
+
+#PCRErrors#
+
+
+
+###Data###
+?Example?: SendOffdate_Well_ID_Gene_AEL#; injectionDate, injection, AEL, pg#; #$batchID#$, injN, hatchB, hatchC, pg#; ExtractionDate, ExtractionMethod, (ExtractionModification), #$ExtractionID$#, timeFrozen, pg#; PCRdate, PCRMethod, FW primer conc, RV primer conc, Stat conc, anneal temp, denature temp, numberOfCyles, Errors
